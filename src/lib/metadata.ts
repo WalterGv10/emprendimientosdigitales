@@ -37,7 +37,7 @@ export const siteMetadata: Metadata = {
         description: BUSINESS.description,
         images: [
             {
-                url: "/og/og-default.jpg",
+                url: "/og/og-default.png",
                 width: 1200,
                 height: 630,
                 alt: BUSINESS.name,
@@ -48,7 +48,7 @@ export const siteMetadata: Metadata = {
         card: "summary_large_image",
         title: `${BUSINESS.name} — ${BUSINESS.tagline}`,
         description: BUSINESS.description,
-        images: ["/og/og-default.jpg"],
+        images: ["/og/og-default.png"],
     },
     robots: {
         index: true,
