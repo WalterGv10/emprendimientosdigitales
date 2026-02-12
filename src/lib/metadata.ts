@@ -35,20 +35,13 @@ export const siteMetadata: Metadata = {
         siteName: BUSINESS.name,
         title: `${BUSINESS.name} — ${BUSINESS.tagline}`,
         description: BUSINESS.description,
-        images: [
-            {
-                url: "/og/og-default.png",
-                width: 1200,
-                height: 630,
-                alt: BUSINESS.name,
-            },
-        ],
+        // images: automatically handled by opengraph-image.tsx
     },
     twitter: {
         card: "summary_large_image",
         title: `${BUSINESS.name} — ${BUSINESS.tagline}`,
         description: BUSINESS.description,
-        images: ["/og/og-default.png"],
+        // images: automatically handled by opengraph-image.tsx
     },
     robots: {
         index: true,
