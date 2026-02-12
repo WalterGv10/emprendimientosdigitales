@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BUSINESS, getWhatsAppUrl } from "@/lib/constants";
 import { ArrowRight, DollarSign, Globe2, Sparkles } from "lucide-react";
+import { useReducedMotion } from "@/lib/animation-utils";
 
 export default function HeroSection() {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950 px-4 py-12 md:py-20 lg:py-24">
             {/* Background Image */}
@@ -24,23 +27,25 @@ export default function HeroSection() {
             {/* Animated Background Gradients */}
             <div className="absolute inset-0 pointer-events-none">
                 <motion.div
-                    animate={{
+                    animate={shouldReduceMotion ? {} : {
                         scale: [1, 1.2, 1],
                         opacity: [0.4, 0.6, 0.4],
                         x: [0, 50, 0],
                         y: [0, -30, 0]
                     }}
                     transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
                     className="absolute -top-[20%] -right-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-orange-500/30 blur-[80px] md:blur-[120px]"
                 />
                 <motion.div
-                    animate={{
+                    animate={shouldReduceMotion ? {} : {
                         scale: [1.2, 1, 1.2],
                         opacity: [0.3, 0.5, 0.3],
                         x: [0, -50, 0],
                         y: [0, 30, 0]
                     }}
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
                     className="absolute -bottom-[20%] -left-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-blue-500/30 blur-[80px] md:blur-[120px]"
                 />
             </div>

@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/animation-utils";
 
 export default function Marquee() {
+    const shouldReduceMotion = useReducedMotion();
+
     const words = [
         "LANDING PAGES", "ESTRATEGIA DIGITAL", "VENTAS EN VIVO", "CATÁLOGOS PREMIUM",
         "REAL ESTATE", "AGENCY AUTO", "BRANDING", "UI/UX DESIGN",
@@ -12,8 +15,9 @@ export default function Marquee() {
     return (
         <div className="relative py-8 md:py-12 bg-coral-500 overflow-hidden select-none">
             <motion.div
-                animate={{ x: [0, -1000] }}
+                animate={shouldReduceMotion ? {} : { x: [0, -1000] }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
                 className="flex gap-8 md:gap-12 whitespace-nowrap"
             >
                 {words.map((word, i) => (
