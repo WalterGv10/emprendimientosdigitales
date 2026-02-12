@@ -1,0 +1,57 @@
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Emprendimientos Digitales",
+    "description": "Soluciones digitales estratégicas para emprendedores. Convertimos tu esfuerzo en ventas organizadas, constantes y profesionales.",
+    "url": "https://emprendedorasdigital.com",
+    "image": "https://emprendedorasdigital.com/logoemp.png",
+    "telephone": "+502-54122572",
+    "email": "wgarcia.10@outlook.com",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GT"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "GT"
+    },
+    "areaServed": {
+        "@type": "Place",
+        "name": "Guatemala"
+    },
+    "priceRange": "Q150-Q750",
+    "sameAs": [
+        "https://www.facebook.com/walwebede",
+        "https://www.instagram.com/walwebestudio/",
+        "https://www.tiktok.com/@waltergarciaveliz"
+    ],
+    "service": [
+        {
+            "@type": "Service",
+            "name": "Landing Pages para Emprendedoras",
+            "description": "Páginas estratégicas de conversión con integración WhatsApp",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Emprendimientos Digitales"
+            }
+        },
+        {
+            "@type": "Service",
+            "name": "Catálogos Digitales",
+            "description": "Organización profesional de ventas por live de Facebook y TikTok",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Emprendimientos Digitales"
+            }
+        },
+        {
+            "@type": "Service",
+            "name": "Desarrollo de Sitios Web",
+            "description": "Sitios corporativos y landing pages para servicios profesionales",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Emprendimientos Digitales"
+            }
+        }
+    ]
+}

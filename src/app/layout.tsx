@@ -27,8 +27,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Emprendimientos Digitales",
+    "description": "Soluciones digitales estratégicas para emprendedores",
+    "url": "https://emprendedorasdigital.com",
+    "image": "https://emprendedorasdigital.com/logoemp.png",
+    "telephone": "+502-54122572",
+    "email": "wgarcia.10@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GT"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Guatemala"
+    },
+    "priceRange": "Q150-Q750",
+    "sameAs": [
+      "https://www.facebook.com/walwebede",
+      "https://www.instagram.com/walwebestudio/",
+      "https://www.tiktok.com/@waltergarciaveliz"
+    ]
+  };
+
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${outfit.variable} ${geistMono.variable} font-sans antialiased`}
       >

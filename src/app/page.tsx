@@ -11,7 +11,7 @@ const CtaSection = dynamic(() => import("@/components/sections/CtaSection"));
 
 export default function Home() {
   return (
-    <>
+    <main>
       <HeroSection />
       <div className="bg-slate-950">
         <Marquee />
@@ -24,6 +24,6 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <CtaSection />
-    </>
+    </main>
   );
 }
