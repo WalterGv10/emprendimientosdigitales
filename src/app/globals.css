@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors — Warm, empowering, professional */
+  --coral-50: #fff5f2;
+  --coral-100: #ffe8e0;
+  --coral-200: #ffd0c2;
+  --coral-300: #ffab94;
+  --coral-400: #ff7f5c;
+  --coral-500: #ff5a36;
+  --coral-600: #e8381a;
+  --coral-700: #c42a10;
+
+  --plum-50: #faf5ff;
+  --plum-100: #f3e8ff;
+  --plum-200: #e9d5ff;
+  --plum-300: #d8b4fe;
+  --plum-400: #c084fc;
+  --plum-500: #a855f7;
+  --plum-600: #9333ea;
+  --plum-700: #7e22ce;
+
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+
+  /* Neutrals */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Semantic */
+  --background: #020617;
+  /* slate-950 */
+  --foreground: #f8fafc;
+  /* slate-50 */
+  --muted: var(--slate-900);
+  --muted-foreground: var(--slate-400);
+  --border: var(--slate-800);
+
+  --whatsapp: #25d366;
+  --whatsapp-dark: #128c42;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --color-coral-50: var(--coral-50);
+  --color-coral-100: var(--coral-100);
+  --color-coral-200: var(--coral-200);
+  --color-coral-300: var(--coral-300);
+  --color-coral-400: var(--coral-400);
+  --color-coral-500: var(--coral-500);
+  --color-coral-600: var(--coral-600);
+  --color-coral-700: var(--coral-700);
+
+  --color-plum-50: var(--plum-50);
+  --color-plum-100: var(--plum-100);
+  --color-plum-200: var(--plum-200);
+  --color-plum-300: var(--plum-300);
+  --color-plum-400: var(--plum-400);
+  --color-plum-500: var(--plum-500);
+  --color-plum-600: var(--plum-600);
+  --color-plum-700: var(--plum-700);
+
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
+
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection colors */
+::selection {
+  background-color: var(--coral-100);
+  color: var(--coral-700);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--coral-500);
+  outline-offset: 2px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--coral-500), var(--plum-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
