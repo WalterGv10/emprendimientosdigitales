@@ -10,8 +10,8 @@ export const siteMetadata: Metadata = {
         template: `%s | ${BUSINESS.name}`,
     },
     icons: {
-        icon: "/logoemp.png",
-        apple: "/logoemp.png",
+        icon: "/logo1.webp",
+        apple: "/logo1.webp",
     },
     description: BUSINESS.description,
     keywords: [

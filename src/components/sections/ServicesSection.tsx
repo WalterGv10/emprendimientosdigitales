@@ -94,73 +94,7 @@ export default function ServicesSection() {
                     </motion.div>
                 )}
 
-                {/* ═══════════════════════════════════════════════════════ */}
-                {/* ✨ IDENTIDAD — Left Accent Card                        */}
-                {/* ═══════════════════════════════════════════════════════ */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="mb-12 sm:mb-16 md:mb-20"
-                >
-                    <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 mb-6 sm:mb-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200/50">
-                        <div className="w-1.5 sm:w-2 h-16 sm:h-20 bg-gradient-to-b from-emerald-400 to-teal-500 rounded-full flex-shrink-0 hidden sm:block" />
-                        <div className="flex-1">
-                            <div className="inline-block px-3 py-1 bg-emerald-500/10 text-emerald-700 rounded-lg text-xs font-black uppercase tracking-wider mb-2">
-                                ✨ Identidad & Organización
-                            </div>
-                            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-2 leading-tight">
-                                Tu Primera Imagen Profesional
-                            </h3>
-                            <p className="text-sm sm:text-base text-slate-600 mb-1">
-                                <strong className="text-emerald-600">Desde Q750</strong> · Despegue profesional
-                            </p>
-                            <p className="text-xs sm:text-sm text-slate-500">
-                                Logo, Kit de Redes y Catálogo Inicial para vender más.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        {basicServices.map((service, index) => (
-                            <ServiceCard key={service.id} service={service} index={index} />
-                        ))}
-                    </div>
-                </motion.div>
 
-                {/* ═══════════════════════════════════════════════════════ */}
-                {/* 📊 ESCALABILIDAD — Horizontal Split Layout              */}
-                {/* ═══════════════════════════════════════════════════════ */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="mb-12 sm:mb-16 md:mb-20"
-                >
-                    <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 mb-6 sm:mb-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200/50">
-                        <div className="w-1.5 sm:w-2 h-16 sm:h-20 bg-gradient-to-b from-blue-400 to-cyan-500 rounded-full flex-shrink-0 hidden sm:block" />
-                        <div className="flex-1">
-                            <div className="inline-block px-3 py-1 bg-blue-500/10 text-blue-700 rounded-lg text-xs font-black uppercase tracking-wider mb-2">
-                                📊 Escalabilidad Digital
-                            </div>
-                            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-2 leading-tight">
-                                Organiza y Vende Digitalmente
-                            </h3>
-                            <p className="text-sm sm:text-base text-slate-600 mb-1">
-                                <strong className="text-blue-600">Desde Q750</strong> · Para negocios activos
-                            </p>
-                            <p className="text-xs sm:text-sm text-slate-500">
-                                Catálogos inteligentes y vitrinas digitales de alto impacto.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        {mediumServices.map((service, index) => (
-                            <ServiceCard key={service.id} service={service} index={index} />
-                        ))}
-                    </div>
-                </motion.div>
 
                 {/* ═══════════════════════════════════════════════════════ */}
                 {/* 🚀 TRANSFORMACIÓN PRO — Featured Card with Glow         */}
@@ -172,33 +106,7 @@ export default function ServicesSection() {
                     transition={{ duration: 0.7 }}
                     className="mb-12 sm:mb-16 md:mb-20"
                 >
-                    <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-violet-950 via-purple-950 to-slate-950 p-6 sm:p-8 md:p-10 mb-6 sm:mb-8 border border-purple-500/20">
-                        {/* Glow effects */}
-                        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]" />
-                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-violet-500/15 rounded-full blur-[80px]" />
 
-                        <div className="relative z-10">
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4">
-                                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-500/20 border border-purple-400/30 rounded-full text-xs font-bold text-purple-300">
-                                    🚀 Transformación Pro
-                                </div>
-                                <span className="px-3 py-1 bg-amber-400/20 border border-amber-400/30 rounded-full text-[10px] sm:text-xs font-black text-amber-300 uppercase tracking-wider">
-                                    ⭐ Más Popular
-                                </span>
-                            </div>
-                            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-2 leading-tight">
-                                Estructura Web y Apps
-                            </h3>
-                            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-2">
-                                <span className="text-lg sm:text-xl font-black text-purple-300">Web Q750</span>
-                                <span className="text-slate-500">·</span>
-                                <span className="text-lg sm:text-xl font-black text-amber-300">Con Dominio Q1,500</span>
-                            </div>
-                            <p className="text-xs sm:text-sm text-slate-400 max-w-2xl">
-                                Landing pages de alta conversión y aplicaciones de automatización. La mejor inversión para escalar tu negocio digital.
-                            </p>
-                        </div>
-                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         {highServices.map((service, index) => (
                             <ServiceCard key={service.id} service={service} index={index} />

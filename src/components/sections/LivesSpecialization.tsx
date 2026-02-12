@@ -11,7 +11,7 @@ const categories = [
         color: "from-blue-600/20 to-indigo-600/20",
         accent: "bg-blue-500",
         id: "01",
-        image: "/fondolives.png"
+        image: "/fondolives.webp"
     },
     {
         title: "AGENCY AUTO",
@@ -20,7 +20,7 @@ const categories = [
         color: "from-slate-700/20 to-slate-900/20",
         accent: "bg-slate-500",
         id: "02",
-        image: "/fondoauto.png"
+        image: "/fondoauto.webp"
     },
     {
         title: "REAL ESTATE",
@@ -29,7 +29,7 @@ const categories = [
         color: "from-emerald-600/20 to-teal-600/20",
         accent: "bg-emerald-500",
         id: "03",
-        image: "/fondorealestate.png"
+        image: "/fondorealestate.webp"
     },
     {
         title: "CONSULTING",
@@ -38,7 +38,7 @@ const categories = [
         color: "from-purple-600/20 to-plum-600/20",
         accent: "bg-plum-500",
         id: "04",
-        image: "/fondoCONSULTING.png"
+        image: "/fondoCONSULTING.webp"
     },
 ];
 
@@ -48,7 +48,7 @@ export default function LivesSpecialization() {
             {/* Section Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/fondolives.png"
+                    src="/fondolives.webp"
                     alt="Section Background"
                     fill
                     className="object-cover opacity-20"

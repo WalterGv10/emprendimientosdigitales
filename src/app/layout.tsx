@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { siteMetadata } from "@/lib/metadata";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 // Primary font — modern, friendly, and professional
@@ -33,7 +35,7 @@ export default function RootLayout({
     "name": "Emprendimientos Digitales",
     "description": "Soluciones digitales estratégicas para emprendedores",
     "url": "https://emprendedorasdigital.com",
-    "image": "https://emprendedorasdigital.com/logoemp.png",
+    "image": "https://emprendedorasdigital.com/logo1.webp",
     "telephone": "+502-54122572",
     "email": "wgarcia.10@outlook.com",
     "address": {
@@ -69,6 +71,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

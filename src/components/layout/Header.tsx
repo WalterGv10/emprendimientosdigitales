@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                ? "py-4 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-purple-500/5"
+                ? "py-4 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-cyan-500/5"
                 : "py-8 bg-transparent"
                 }`}
         >
@@ -28,14 +28,14 @@ export default function Header() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group" aria-label="Ir al inicio">
                     <Image
-                        src="/logoemp.png"
+                        src="/logo1.webp"
                         alt="Logo"
                         width={48}
                         height={48}
-                        className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                        className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"
                     />
                     <span className="text-lg md:text-xl font-black tracking-tighter uppercase transition-colors text-white">
-                        EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">DIGITALES</span>
+                        EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITALES</span>
                     </span>
                 </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
                         <li key={link.href}>
                             <Link
                                 href={link.href}
-                                className="text-[10px] font-black uppercase tracking-[0.3em] transition-all hover:text-purple-400 relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-purple-400 after:transition-all hover:after:w-full text-white/70 hover:text-white"
+                                className="text-[10px] font-black uppercase tracking-[0.3em] transition-all hover:text-cyan-400 relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full text-white/70 hover:text-white"
                             >
                                 {link.label}
                             </Link>

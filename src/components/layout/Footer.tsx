@@ -4,31 +4,40 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS, SERVICES, getWhatsAppUrl, NAV_LINKS } from "@/lib/constants";
 import { motion } from "framer-motion";
+import { Globe2 } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden bg-slate-950 pt-20 md:pt-28 lg:pt-32 pb-8 md:pb-12 border-t border-slate-900">
-            {/* Massive Kinetic background word */}
-            <div className="hidden md:flex absolute top-10 left-0 w-full overflow-hidden pointer-events-none opacity-[0.03] select-none scale-150">
-                <h2 className="text-[25vw] font-black text-white whitespace-nowrap tracking-tighter uppercase italic">
-                    WALWEB ESTUDIO •
-                </h2>
+        <footer className="relative overflow-hidden bg-slate-950 pt-12 md:pt-16 pb-8 md:pb-12 border-t border-slate-900">
+            {/* Background Image - Created from User Asset */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/logo2.webp"
+                    alt="Footer Background"
+                    fill
+                    className="object-contain opacity-[0.15]"
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
             </div>
 
+
+
             <div className="container relative z-10 mx-auto px-6">
+
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 mb-16 md:mb-24">
                     {/* Brand */}
                     <div className="lg:col-span-5">
                         <Link href="/" className="inline-flex items-center gap-3 md:gap-4 mb-6 md:mb-8 group">
                             <Image
-                                src="/logoemp.png"
+                                src="/logo2.webp"
                                 alt="Logo"
                                 width={56}
                                 height={56}
-                                className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                                className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"
                             />
                             <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
-                                EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">DIGITALES</span>
+                                EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITALES</span>
                             </span>
                         </Link>
                         <p className="text-base md:text-xl text-slate-400 font-medium leading-relaxed max-w-sm mb-8 md:mb-12">
@@ -40,7 +49,7 @@ export default function Footer() {
                                 href={BUSINESS.social.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-purple-900/50 hover:text-purple-400 hover:border-purple-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20"
+                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-cyan-900/50 hover:text-cyan-400 hover:border-cyan-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-900/20"
                                 aria-label="Facebook"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +60,7 @@ export default function Footer() {
                                 href={BUSINESS.social.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-purple-900/50 hover:text-purple-400 hover:border-purple-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20"
+                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-cyan-900/50 hover:text-cyan-400 hover:border-cyan-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-900/20"
                                 aria-label="Instagram"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +71,7 @@ export default function Footer() {
                                 href={BUSINESS.social.tiktok}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-purple-900/50 hover:text-purple-400 hover:border-purple-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20"
+                                className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl border border-slate-800 text-slate-400 hover:bg-cyan-900/50 hover:text-cyan-400 hover:border-cyan-500 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-900/20"
                                 aria-label="TikTok"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -75,11 +84,11 @@ export default function Footer() {
                     {/* Navigation Columns */}
                     <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
                         <div className="space-y-4 md:space-y-6">
-                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-400">Explorar</h4>
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400">Explorar</h4>
                             <ul className="space-y-3 md:space-y-4">
                                 {NAV_LINKS.map(link => (
                                     <li key={link.href}>
-                                        <Link href={link.href} className="text-sm font-bold text-slate-300 hover:text-purple-400 transition-colors uppercase tracking-tight">
+                                        <Link href={link.href} className="text-sm font-bold text-slate-300 hover:text-cyan-400 transition-colors uppercase tracking-tight">
                                             {link.label}
                                         </Link>
                                     </li>
@@ -88,11 +97,11 @@ export default function Footer() {
                         </div>
 
                         <div className="space-y-4 md:space-y-6">
-                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-400">Servicios</h4>
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400">Servicios</h4>
                             <ul className="space-y-3 md:space-y-4">
                                 {SERVICES.slice(0, 4).map(service => (
                                     <li key={service.id}>
-                                        <Link href={`/servicios/${service.slug}`} className="text-sm font-bold text-slate-300 hover:text-purple-400 transition-colors uppercase tracking-tight line-clamp-2">
+                                        <Link href={`/servicios/${service.slug}`} className="text-sm font-bold text-slate-300 hover:text-cyan-400 transition-colors uppercase tracking-tight line-clamp-2">
                                             {service.title}
                                         </Link>
                                     </li>
@@ -101,12 +110,12 @@ export default function Footer() {
                         </div>
 
                         <div className="space-y-4 md:space-y-6">
-                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-400">Contacto</h4>
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400">Contacto</h4>
                             <div className="space-y-3 md:space-y-4">
-                                <a href={getWhatsAppUrl()} className="block text-sm font-black text-slate-300 hover:text-purple-400 transition-colors">
+                                <a href={getWhatsAppUrl()} className="block text-sm font-black text-slate-300 hover:text-cyan-400 transition-colors">
                                     WHATSAPP DIRECTO
                                 </a>
-                                <a href={`mailto:${BUSINESS.email}`} className="block text-xs md:text-sm font-bold text-slate-300 hover:text-purple-400 transition-colors break-all">
+                                <a href={`mailto:${BUSINESS.email}`} className="block text-xs md:text-sm font-bold text-slate-300 hover:text-cyan-400 transition-colors break-all">
                                     {BUSINESS.email}
                                 </a>
                             </div>
@@ -134,7 +143,7 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="text-xs font-black uppercase tracking-[0.2em] text-white flex items-center gap-2 group"
                         >
-                            Walweb <span className="text-purple-400 group-hover:scale-110 transition-transform">Estudio</span>
+                            Walweb <span className="text-cyan-400 group-hover:scale-110 transition-transform">Estudio</span>
                         </a>
                     </div>
                 </div>
