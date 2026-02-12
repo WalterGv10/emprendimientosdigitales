@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { BUSINESS, getWhatsAppUrl } from "@/lib/constants";
 import { ArrowRight, DollarSign, Globe2, Sparkles } from "lucide-react";
 
@@ -9,10 +10,13 @@ export default function HeroSection() {
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950 px-4 py-12 md:py-20 lg:py-24">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/hero1.png"
                     alt="Background"
-                    className="w-full h-full object-cover opacity-60"
+                    fill
+                    priority
+                    quality={85}
+                    className="object-cover opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60" />
             </div>
@@ -152,10 +156,11 @@ export default function HeroSection() {
                         {/* Identidad Card */}
                         <div className="group relative bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 hover:border-orange-500/30 transition-all duration-500 overflow-hidden min-h-[140px] sm:min-h-[160px]">
                             <div className="absolute inset-0 z-0">
-                                <img
+                                <Image
                                     src="/brandingdigital.png"
                                     alt="Branding"
-                                    className="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-slate-950/40" />
                             </div>
@@ -176,10 +181,11 @@ export default function HeroSection() {
                         {/* Escalabilidad Card */}
                         <div className="group relative bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 hover:border-blue-500/30 transition-all duration-500 overflow-hidden min-h-[140px] sm:min-h-[160px]">
                             <div className="absolute inset-0 z-0">
-                                <img
+                                <Image
                                     src="/presenciadigital.png"
                                     alt="Escalabilidad"
-                                    className="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-blue-900/40" />
                             </div>
@@ -200,10 +206,11 @@ export default function HeroSection() {
                         {/* App Card */}
                         <div className="group relative bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 hover:border-cyan-500/30 transition-all duration-500 overflow-hidden min-h-[140px] sm:min-h-[160px]">
                             <div className="absolute inset-0 z-0">
-                                <img
+                                <Image
                                     src="/negoapp.png"
                                     alt="App"
-                                    className="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-cyan-900/40" />
                             </div>
@@ -224,10 +231,11 @@ export default function HeroSection() {
                         {/* Celebraciones Card */}
                         <div className="group relative bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 hover:border-pink-500/30 transition-all duration-500 overflow-hidden min-h-[140px] sm:min-h-[160px]">
                             <div className="absolute inset-0 z-0">
-                                <img
+                                <Image
                                     src="/invitacionbackg.png"
                                     alt="Celebraciones"
-                                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-pink-900/40" />
                             </div>

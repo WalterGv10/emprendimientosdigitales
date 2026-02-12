@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, BUSINESS, getWhatsAppUrl } from "@/lib/constants";
 
@@ -26,10 +27,12 @@ export default function Header() {
                 {/* Logo */}
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group" aria-label="Ir al inicio">
-                    <img
+                    <Image
                         src="/logoemp.png"
                         alt="Logo"
-                        className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                        width={48}
+                        height={48}
+                        className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
                     />
                     <span className="text-lg md:text-xl font-black tracking-tighter uppercase transition-colors text-white">
                         EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">DIGITALES</span>

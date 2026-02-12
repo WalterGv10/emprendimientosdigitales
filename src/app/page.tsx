@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic';
 import HeroSection from "@/components/sections/HeroSection";
-import LivesSpecialization from "@/components/sections/LivesSpecialization";
 import Marquee from "@/components/ui/Marquee";
-import ProblemSection from "@/components/sections/ProblemSection";
-import ServicesSection from "@/components/sections/ServicesSection";
-import ProcessSection from "@/components/sections/ProcessSection";
-import CtaSection from "@/components/sections/CtaSection";
+
+// Dynamic imports for below-fold sections to reduce initial bundle size
+const LivesSpecialization = dynamic(() => import("@/components/sections/LivesSpecialization"));
+const ProblemSection = dynamic(() => import("@/components/sections/ProblemSection"));
+const ServicesSection = dynamic(() => import("@/components/sections/ServicesSection"));
+const ProcessSection = dynamic(() => import("@/components/sections/ProcessSection"));
+const CtaSection = dynamic(() => import("@/components/sections/CtaSection"));
 
 export default function Home() {
   return (

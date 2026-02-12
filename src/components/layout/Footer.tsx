@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS, SERVICES, getWhatsAppUrl, NAV_LINKS } from "@/lib/constants";
 import { motion } from "framer-motion";
 
@@ -19,10 +20,12 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="lg:col-span-5">
                         <Link href="/" className="inline-flex items-center gap-3 md:gap-4 mb-6 md:mb-8 group">
-                            <img
+                            <Image
                                 src="/logoemp.png"
                                 alt="Logo"
-                                className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                                width={56}
+                                height={56}
+                                className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
                             />
                             <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
                                 EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">DIGITALES</span>
