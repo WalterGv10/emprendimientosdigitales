@@ -45,11 +45,12 @@ export interface Service {
   idealFor: string;
   whatsappMessage: string;
   gradient: string;
+  price?: string;
 }
 
 export const SERVICES: Service[] = [
   {
-    id: "landing-pages",
+    id: "landing-inmobiliaria",
     slug: "landing-pages",
     icon: "🏗️",
     title: "Venta de Terrenos y Bienes Raíces",
@@ -178,43 +179,60 @@ export const SERVICES: Service[] = [
     id: "combo-visual",
     slug: "combo-visual",
     icon: "✨",
-    title: "Combo Visual Emprendedora",
+    title: "Identidad & Organización",
     shortDescription:
-      "Tu imagen profesional lista para usar: Logo, Foto de Perfil y Publicidad.",
+      "Tu imagen profesional lista: Logo, Kit de Redes y Catálogo Inicial.",
     fullDescription:
-      "Si sientes que una página web es mucho por ahora, empieza por lo básico pero hazlo bien. Creamos tu identidad visual para que te vean como toda una profesional en redes sociales.",
+      "Desde Q750. Ideal para emprendedoras que venden en redes y quieren mejorar su imagen sin gastar en una web completa todavía.",
     features: [
       "Diseño de Logotipo Moderno",
       "Foto de Perfil Profesional",
       "Ads para Historias (Instagram/WhatsApp)",
-      "Portada para Facebook",
-      "Miniatura para tus videos",
+      "Catálogo de productos inicial",
       "Paleta de colores definida",
     ],
-    idealFor: "Emprendedoras que venden en redes y quieren mejorar su imagen sin gastar en una web completa.",
-    whatsappMessage: "¡Hola! Me interesa el Combo Visual para mejorar mi imagen en redes.",
+    idealFor: "Emprendedoras que venden en redes sociales.",
+    whatsappMessage: "¡Hola! Me interesa el plan de Identidad & Organización de Q750.",
     gradient: "from-pink-500 to-rose-400",
   },
   {
-    id: "combo-eventos",
-    slug: "combo-eventos",
-    icon: "🎉",
-    title: "Combo de Eventos Especiales",
+    id: "estructura-web",
+    slug: "landing-pages",
+    icon: "🌐",
+    title: "Estructura Web Pro",
     shortDescription:
-      "Invitación digital + confirmación + imprimible + video recuerdo. Todo en uno.",
+      "Tu sitio web profesional con carga instantánea y optimizado para ventas.",
     fullDescription:
-      "La solución completa para tus eventos: bodas, quinceaños, cumpleaños. Landing page con invitación digital donde tus invitados confirman asistencia, sistema que recolecta sus datos, archivo listo para imprimir, y al final un video emotivo como recuerdo especial del evento.",
+      "Desde Q750. Diseño y código de alto nivel para convertir visitantes en clientes de WhatsApp.",
     features: [
-      "Landing page con invitación digital personalizada",
-      "Sistema de confirmación de asistencia",
-      "Recolección automática de datos de invitados",
-      "Archivo imprimible para invitaciones físicas",
-      "Video conmemorativo del evento (post-evento)",
-      "Diseño personalizado según tu evento",
+      "Velocidad de Carga Instantánea",
+      "Optimización para Móviles",
+      "Integración con WhatsApp",
+      "Diseño Futurista Premium",
     ],
-    idealFor: "Personas organizando bodas, quinceaños, cumpleaños y eventos especiales que quieren combinar lo digital con lo tradicional.",
-    whatsappMessage: "¡Hola! Me interesa el Combo de Eventos para mi celebración especial.",
-    gradient: "from-purple-500 to-indigo-600",
+    idealFor: "Negocios que necesitan presencia profesional con dominio propio.",
+    whatsappMessage: "¡Hola! Me interesa la Estructura Web de Q750.",
+    gradient: "from-blue-500 to-indigo-600",
+  },
+  {
+    id: "negocio-app",
+    slug: "combo-inicio",
+    icon: "🚀",
+    title: "Transforma tu Negocio en App",
+    price: "Desde Q750\n(aprox. $100 USD)",
+    shortDescription:
+      "Desarrollamos Aplicaciones a medida que automatizan y escalan tu operación.\n\n• Q750: Web con dominio en despliegue gratuito\n• Q1,500: Con dominio propio y correo incluido",
+    fullDescription:
+      "Desde Q750 (aprox. $100 USD). Opciones: Q750 web con dominio en despliegue gratuito. Q1,500 con dominio propio y correo incluido.",
+    features: [
+      "Q750: Web con dominio en despliegue gratuito",
+      "Q1,500: Con dominio propio y correo incluido",
+      "Automatización de Ventas",
+      "Escalabilidad Post-Live",
+    ],
+    idealFor: "Negocios establecidos que quieren automatizar sus cierres.",
+    whatsappMessage: "¡Hola! Me interesa transformar mi negocio en App.",
+    gradient: "from-coral-500 to-orange-600",
   },
 ];
 

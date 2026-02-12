@@ -36,7 +36,13 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
                 {service.title}
             </h3>
 
-            <p className="mb-6 md:mb-8 flex-1 text-sm md:text-base leading-relaxed text-slate-500 font-medium">
+            {service.price && (
+                <div className="mb-4 text-lg font-bold text-coral-500 whitespace-pre-line leading-tight">
+                    {service.price}
+                </div>
+            )}
+
+            <p className="mb-6 md:mb-8 flex-1 text-sm md:text-base leading-relaxed text-slate-500 font-medium whitespace-pre-line">
                 {service.shortDescription}
             </p>
 

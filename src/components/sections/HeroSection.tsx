@@ -24,30 +24,11 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60" />
             </div>
 
-            {/* Animated Background Gradients */}
+            {/* Static Background Gradients - Better Performance */}
             <div className="absolute inset-0 pointer-events-none">
-                <motion.div
-                    animate={shouldReduceMotion ? {} : {
-                        scale: [1, 1.2, 1],
-                        opacity: [0.4, 0.6, 0.4],
-                        x: [0, 50, 0],
-                        y: [0, -30, 0]
-                    }}
-                    transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
-                    className="absolute -top-[20%] -right-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-orange-500/30 blur-[80px] md:blur-[120px]"
-                />
-                <motion.div
-                    animate={shouldReduceMotion ? {} : {
-                        scale: [1.2, 1, 1.2],
-                        opacity: [0.3, 0.5, 0.3],
-                        x: [0, -50, 0],
-                        y: [0, 30, 0]
-                    }}
-                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
-                    className="absolute -bottom-[20%] -left-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-blue-500/30 blur-[80px] md:blur-[120px]"
-                />
+                <div className="absolute -top-[20%] -right-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-orange-500/30 blur-[100px] md:blur-[140px]" />
+                <div className="absolute -bottom-[20%] -left-[10%] w-[80%] md:w-[60%] h-[60%] rounded-full bg-blue-500/30 blur-[100px] md:blur-[140px]" />
+                <div className="absolute top-[30%] right-[20%] w-[40%] h-[40%] rounded-full bg-cyan-500/20 blur-[80px]" />
             </div>
 
             {/* Grid Pattern & Stars */}
@@ -221,14 +202,72 @@ export default function HeroSection() {
                             </div>
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-2 sm:mb-4">
-                                    <h3 className="text-lg sm:text-xl font-black text-white leading-tight">Transforma tu <br className="hidden sm:block" /> Negocio en App</h3>
+                                    <h3 className="text-lg sm:text-xl font-black text-white leading-tight">Sitio Web <br className="hidden sm:block" /> Profesional</h3>
                                     <div className="text-right">
                                         <span className="text-base sm:text-xl font-black text-cyan-400 block">Desde Q750</span>
-                                        <p className="text-[10px] sm:text-xs text-slate-400 font-bold">aprox. $100 USD</p>
+                                        <p className="text-[10px] sm:text-xs text-slate-400 font-bold">web + dominio</p>
+                                        <p className="text-[9px] sm:text-[10px] text-slate-500 font-semibold">Q1,500 con dominio propio</p>
                                     </div>
                                 </div>
-                                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-[90%]">
-                                    Desarrollamos <strong className="text-white">Aplicaciones a medida</strong> que automatizan y escalan tu operación.
+                                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                    Desarrollamos <strong className="text-white">páginas web profesionales</strong> con videos, animaciones de alta calidad y contenido interactivo. Sistema completo de ventas en línea.
+                                    <br /><br />
+                                    <span className="text-[10px] sm:text-xs text-cyan-400 font-black uppercase tracking-wider">✨ Tecnología de última generación</span>
+                                    <br /><br />
+                                    <div className="flex flex-wrap items-start gap-3 sm:gap-4 mb-3">
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" className="h-5 sm:h-6 w-auto opacity-90 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-400 font-semibold">React</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" className="h-5 sm:h-6 w-auto opacity-90 hover:opacity-100 transition-opacity brightness-0 invert" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-400 font-semibold">Next.js</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/astro/FF5D01" alt="Astro" className="h-5 sm:h-6 w-auto opacity-90 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-400 font-semibold">Astro</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular" className="h-5 sm:h-6 w-auto opacity-90 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-400 font-semibold">Angular</span>
+                                        </div>
+                                    </div>
+                                    <span className="text-[9px] sm:text-[10px] text-slate-400 italic leading-relaxed block mb-2">
+                                        Estas aplicaciones usan estos marcos de trabajo, por eso son tan eficientes y visualmente atractivas.
+                                    </span>
+                                    <span className="text-[9px] sm:text-[10px] text-slate-500 font-semibold">Usadas por:</span>
+                                    <br />
+                                    <div className="flex flex-wrap items-start gap-3 sm:gap-4 mb-3">
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">Facebook</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">YouTube</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/netflix/E50914" alt="Netflix" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">Netflix</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">Instagram</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity brightness-0 invert" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">TikTok</span>
+                                        </div>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" className="h-4 sm:h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                                            <span className="text-[7px] sm:text-[8px] text-slate-500 font-medium">Google</span>
+                                        </div>
+                                    </div>
+                                    <span className="text-[10px] sm:text-xs text-slate-200 font-semibold">📱 Optimizado para móviles, tabletas y computadoras</span>
+                                    <br /><br />
+                                    <span className="text-[10px] sm:text-xs text-slate-200 font-semibold">• Q750 (aprox. $100 USD): Web con dominio en despliegue gratuito</span>
+                                    <br />
+                                    <span className="text-[10px] sm:text-xs text-slate-200 font-semibold">• Q1,500 (aprox. $200 USD): Con dominio propio y correo incluido</span>
                                 </p>
                             </div>
                         </div>

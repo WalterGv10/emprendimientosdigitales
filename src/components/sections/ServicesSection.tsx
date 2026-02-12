@@ -10,7 +10,7 @@ export default function ServicesSection() {
     const contentServices = SERVICES.filter(s => s.id === "produccion-audiovisual");
     const basicServices = SERVICES.filter(s => s.id === "combo-visual");
     const mediumServices = SERVICES.filter(s => s.id === "catalogo-digital" || s.id === "catalogo-digital-autos");
-    const highServices = SERVICES.filter(s => s.id === "landing-pages" || s.id === "servicios-empresariales" || s.id === "combo-inicio");
+    const highServices = SERVICES.filter(s => s.id === "landing-inmobiliaria" || s.id === "servicios-empresariales" || s.id === "combo-inicio" || s.id === "estructura-web" || s.id === "negocio-app");
     const specialServices = SERVICES.filter(s => s.id === "combo-eventos");
 
     return (
@@ -74,16 +74,16 @@ export default function ServicesSection() {
                         className="mb-8"
                     >
                         <div className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-black uppercase tracking-wider mb-2">
-                            Nivel Básico
+                            Identidad & Organización
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 mb-2">
                             Tu Primera Imagen Profesional
                         </h3>
                         <p className="text-slate-600 mb-1">
-                            <strong>$20 - $50 USD</strong> · Ideal para empezar
+                            <strong>Desde Q750</strong> · Despegue profesional
                         </p>
                         <p className="text-slate-500 text-sm">
-                            Logo, imágenes de marca, plantillas para redes sociales. Sin necesidad de página web.
+                            Logo, Kit de Redes y Catálogo Inicial para vender más.
                         </p>
                     </motion.div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,16 +102,16 @@ export default function ServicesSection() {
                         className="mb-8"
                     >
                         <div className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-black uppercase tracking-wider mb-2">
-                            Nivel Medio
+                            Escalabilidad Digital
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 mb-2">
                             Organiza y Vende Digitalmente
                         </h3>
                         <p className="text-slate-600 mb-1">
-                            <strong>Precio bajo solicitud</strong> · Para negocios activos
+                            <strong>Desde Q750</strong> · Para negocios activos
                         </p>
                         <p className="text-slate-500 text-sm">
-                            Catálogos digitales para lives, inventarios de vehículos, productos en stock.
+                            Catálogos inteligentes y vitrinas digitales de alto impacto.
                         </p>
                     </motion.div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,16 +130,16 @@ export default function ServicesSection() {
                         className="mb-8"
                     >
                         <div className="inline-block px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-black uppercase tracking-wider mb-2">
-                            Nivel Alto
+                            Transformación Pro
                         </div>
                         <h3 className="text-2xl font-black text-slate-900 mb-2">
-                            Plataformas Completas y Mini Apps
+                            Estructura Web y Apps
                         </h3>
                         <p className="text-slate-600 mb-1">
-                            <strong>Precio bajo solicitud</strong> · Para negocios establecidos
+                            <strong>Web Q750</strong> · <strong>Con Dominio Q1,500</strong>
                         </p>
                         <p className="text-slate-500 text-sm">
-                            Landing pages con formularios, sitios corporativos, catálogos interactivos, sistemas personalizados.
+                            Landing pages de alta conversión y aplicaciones de automatización.
                         </p>
                     </motion.div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
