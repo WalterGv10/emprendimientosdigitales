@@ -104,8 +104,7 @@ export default function HeroSection() {
                             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
                             className="text-sm sm:text-base md:text-lg text-slate-300 font-medium leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"
                         >
-                            Especializados en <strong className="text-white">contenido multimedia, videos y producción audiovisual</strong> para emprendedores.
-                            También landing pages y sistemas web. Desde Guatemala hasta Estados Unidos.
+                            <strong className="text-white">Deja de perder clientes por falta de presencia digital.</strong> Convertimos tus lives, productos y servicios en <span className="text-cyan-400 font-bold">páginas web profesionales</span> que venden 24/7. Desde Guatemala hasta Estados Unidos.
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -127,8 +126,35 @@ export default function HeroSection() {
                                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-cyan-500/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full"
                             >
-                                Ver servicios
+                                Ver servicios →
                             </motion.a>
+                        </motion.div>
+
+                        {/* Trust Indicators */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.7 }}
+                            className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-slate-400"
+                        >
+                            <div className="flex items-center gap-2">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Entrega en 48-72h</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Sin pagos recurrentes</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Soporte incluido</span>
+                            </div>
                         </motion.div>
                     </div>
 
@@ -306,7 +332,7 @@ export default function HeroSection() {
                         </div>
                     </motion.div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }
