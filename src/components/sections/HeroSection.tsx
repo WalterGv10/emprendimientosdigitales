@@ -78,25 +78,30 @@ export default function HeroSection() {
                     <div className="text-center lg:text-left">
                         {/* Floating Badge with Spring Physics */}
                         <motion.div
-                            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 200,
-                                damping: 20,
-                                delay: 0.1
-                            }}
-                            whileHover={{ scale: 1.05 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-xl mb-6 cursor-default"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="inline-flex items-center gap-4 px-5 py-2.5 rounded-full bg-slate-900/40 border border-white/10 backdrop-blur-2xl mb-8 group hover:border-orange-500/30 transition-all duration-500"
                         >
-                            <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            >
-                                <Globe2 className="w-4 h-4 text-orange-400" />
-                            </motion.div>
-                            <span className="text-xs font-black uppercase tracking-wider text-orange-200">
-                                Guatemala → EE.UU. → El Mundo
+                            <div className="flex items-center gap-3">
+                                <div className="relative">
+                                    <Globe2 className="w-4 h-4 text-orange-500" />
+                                    <div className="absolute inset-0 bg-orange-500/40 blur-md rounded-full animate-pulse" />
+                                </div>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                                    Guatemala
+                                </span>
+                            </div>
+
+                            <div className="h-4 w-[1px] bg-white/10" />
+
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-200 transition-colors">
+                                EE.UU.
+                            </span>
+
+                            <div className="h-4 w-[1px] bg-white/10" />
+
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                                El Mundo
                             </span>
                         </motion.div>
 
@@ -152,24 +157,7 @@ export default function HeroSection() {
                             }}
                             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
-                            <motion.a
-                                href={getWhatsAppUrl()}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                whileHover={{ scale: 1.05, y: -2 }}
-                                whileTap={{ scale: 0.98 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-black text-sm uppercase tracking-wider rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50"
-                            >
-                                Cotizar proyecto
-                                <motion.div
-                                    initial={{ x: 0 }}
-                                    whileHover={{ x: 5 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                >
-                                    <ArrowRight className="w-4 h-4" />
-                                </motion.div>
-                            </motion.a>
+
                             <motion.a
                                 href="#servicios"
                                 whileHover={{ scale: 1.05, borderColor: "rgba(34, 211, 238, 0.6)" }}
@@ -190,75 +178,91 @@ export default function HeroSection() {
                         className="space-y-4"
                     >
                         {/* Tier Cards */}
-                        <div className="group relative bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-green-400/30 transition-all duration-500 overflow-hidden">
-                            {/* Animated gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent transition-all duration-500" />
+                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-orange-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
+                            {/* Background Image for the Card */}
+                            <div className="absolute inset-0 z-0">
+                                <img
+                                    src="/brandingdigital.png"
+                                    alt="Branding Digital"
+                                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-slate-950/40" />
+                            </div>
 
-                            {/* Glow effect */}
-                            <div className="absolute -inset-px bg-gradient-to-r from-green-400/20 to-emerald-400/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
-
-                            <div className="relative">
-                                <div className="flex items-start justify-between mb-3">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-2xl">🚀</span>
-                                        <h3 className="text-xl font-black text-white">Básico</h3>
-                                    </div>
+                            <div className="relative z-10">
+                                <div className="flex items-start justify-between mb-4">
+                                    <h3 className="text-xl font-black text-white leading-tight">Identidad <br /> & Arranque</h3>
                                     <div className="text-right">
-                                        <span className="text-xl font-black bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent block">Q150 - Q400</span>
-                                        <p className="text-xs text-slate-400">$20 - $50</p>
+                                        <span className="text-xl font-black bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent block">Q150 - Q400</span>
+                                        <p className="text-xs text-slate-400 font-bold">$20 - $50 USD</p>
                                     </div>
                                 </div>
-                                <p className="text-sm text-slate-300">
-                                    Logos, imágenes de marca, landing sencilla. <strong className="text-white">Tu primera imagen profesional.</strong>
+                                <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
+                                    Despegue profesional con <strong className="text-white">Logotipos de alto impacto, Kit de Redes y Landing optimizada</strong>.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all">
-                            <div className="flex items-start justify-between mb-3">
-                                <div className="flex items-center gap-2">
-                                    <span className="text-2xl">💼</span>
-                                    <h3 className="text-xl font-black text-white">Medio</h3>
-                                </div>
-                                <div className="text-right">
-                                    <span className="text-xl font-black text-blue-400 block">Cotización</span>
-                                    <p className="text-xs text-slate-400">En Q y $</p>
-                                </div>
+                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-blue-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
+                            {/* Background Image for the Card */}
+                            <div className="absolute inset-0 z-0">
+                                <img
+                                    src="/presenciadigital.png"
+                                    alt="Presencia Digital"
+                                    className="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-blue-900/40" />
                             </div>
-                            <p className="text-sm text-slate-300">
-                                Catálogo digital para lives, inventarios. <strong className="text-white">Organiza tus ventas.</strong>
-                            </p>
+
+                            <div className="relative z-10">
+                                <div className="flex items-start justify-between mb-4">
+                                    <h3 className="text-xl font-black text-white leading-tight">Escalabilidad <br /> Digital</h3>
+                                    <div className="text-right">
+                                        <span className="text-xl font-black text-blue-400 block">Cotización</span>
+                                        <p className="text-xs text-slate-400 font-bold">En Q y $ USD</p>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
+                                    Transforma tus transmisiones en ventas masivas con <strong className="text-white">Catálogos Interactivos e Inventarios</strong> diseñados para cierres inmediatos.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all">
-                            <div className="flex items-start justify-between mb-3">
-                                <div className="flex items-center gap-2">
-                                    <span className="text-2xl">⚡</span>
-                                    <h3 className="text-xl font-black text-white">Alto</h3>
-                                </div>
-                                <div className="text-right">
-                                    <span className="text-xl font-black text-purple-400 block">Empresarial</span>
-                                    <p className="text-xs text-slate-400">Personalizado</p>
-                                </div>
+                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-purple-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
+                            {/* Future Background Image Placeholder style */}
+                            <div className="absolute inset-0 z-0">
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/90 to-purple-900/20 group-hover:via-slate-950/80 transition-all duration-500" />
                             </div>
-                            <p className="text-sm text-slate-300">
-                                Mini apps, catálogos interactivos, landing completas. <strong className="text-white">Plataforma completa.</strong>
-                            </p>
+
+                            <div className="relative z-10">
+                                <div className="flex items-start justify-between mb-4">
+                                    <h3 className="text-xl font-black text-white leading-tight">Transforma tu <br /> Negocio en App</h3>
+                                    <div className="text-right">
+                                        <span className="text-xl font-black text-purple-400 block">Cotización</span>
+                                        <p className="text-xs text-slate-400 font-bold">Consultoría Élite</p>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
+                                    Lleva tu empresa al siguiente nivel. Desarrollamos <strong className="text-white">Aplicaciones personalizadas y sistemas robustos</strong> que automatizan y escalan tu operación.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-6 hover:from-pink-500/20 hover:to-purple-500/20 transition-all">
-                            <div className="flex items-start justify-between mb-3">
-                                <div className="flex items-center gap-2">
-                                    <span className="text-2xl">🎉</span>
-                                    <h3 className="text-xl font-black text-white">Eventos</h3>
+                        <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-6 hover:from-pink-500/20 hover:to-purple-500/20 transition-all group duration-500">
+                            <div className="flex items-start justify-between mb-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-16 h-16 rounded-2xl bg-pink-500/5 border border-pink-500/10 p-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:border-pink-500/30 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.15)] overflow-hidden text-2xl">
+                                        🎉
+                                    </div>
+                                    <h3 className="text-xl font-black text-white">Eventos Memorables</h3>
                                 </div>
                                 <div className="text-right">
                                     <span className="text-xl font-black text-pink-400 block">Desde Q1,200</span>
-                                    <p className="text-xs text-slate-400">aprox. $150</p>
+                                    <p className="text-xs text-slate-400 font-bold">aprox. $150 USD</p>
                                 </div>
                             </div>
-                            <p className="text-sm text-slate-300">
-                                Invitación digital + confirmación + imprimible + video. <strong className="text-white">Tu evento memorable.</strong>
+                            <p className="text-sm text-slate-300 leading-relaxed">
+                                Experiencias digitales para celebraciones. <strong className="text-white">Invitación Interactiva, Confirmación Inteligente</strong> y contenido audiovisual conmemorativo.
                             </p>
                         </div>
 
