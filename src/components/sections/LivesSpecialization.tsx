@@ -1,45 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const categories = [
     {
         title: "PROX RETAIL",
         icon: "🛍️",
-        description: "Escalabilidad total para ventas minoristas post-transmisión.",
+        description: "El motor de ventas imparable para moda, hogar y más productos de alta rotación.",
         color: "from-blue-600/20 to-indigo-600/20",
         accent: "bg-blue-500",
-        id: "01"
+        id: "01",
+        image: "/fondolives.png"
     },
     {
         title: "AGENCY AUTO",
         icon: "🚗",
-        description: "Vitrina digital premium para el sector automotriz.",
+        description: "La vitrina digital de alto rendimiento para el mercado automotriz premium.",
         color: "from-slate-700/20 to-slate-900/20",
         accent: "bg-slate-500",
-        id: "02"
+        id: "02",
+        image: "/fondoauto.png"
     },
     {
         title: "REAL ESTATE",
         icon: "🏗️",
-        description: "Estructura de cierre para lotificaciones y preventas.",
+        description: "Sistemas de preventa y cierre para desarrollos y lotificaciones de alta plusvalía.",
         color: "from-emerald-600/20 to-teal-600/20",
         accent: "bg-emerald-500",
-        id: "03"
+        id: "03",
+        image: "/fondorealestate.png"
     },
     {
         title: "CONSULTING",
         icon: "💼",
-        description: "Sistemas de agenda y autoridad para profesionales.",
+        description: "Sistemas de autoridad y agendamiento inteligente para profesionales de élite.",
         color: "from-purple-600/20 to-plum-600/20",
         accent: "bg-plum-500",
-        id: "04"
+        id: "04",
+        image: "/fondoCONSULTING.png"
     },
 ];
 
 export default function LivesSpecialization() {
     return (
         <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-[#0A0A0A]">
+            {/* Section Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/fondolives.png"
+                    alt="Section Background"
+                    fill
+                    className="object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
+            </div>
+
             {/* Decorative center light */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-coral-500/5 blur-[150px] pointer-events-none" />
 
@@ -87,10 +103,18 @@ export default function LivesSpecialization() {
                             transition={{ delay: i * 0.1 }}
                             className={`group relative h-[350px] md:h-[400px] overflow-hidden rounded-2xl md:rounded-3xl border border-white/5 bg-gradient-to-br ${cat.color} p-6 md:p-8 flex flex-col justify-end transition-all hover:border-white/20`}
                         >
-                            {/* Background ID */}
-                            <span className="absolute top-6 md:top-8 right-6 md:right-8 text-6xl md:text-8xl font-black text-white/[0.03] select-none group-hover:text-white/[0.06] transition-colors uppercase italic">
-                                {cat.id}
-                            </span>
+                            {/* Card Background Image */}
+                            {cat.image && (
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src={cat.image}
+                                        alt={cat.title}
+                                        fill
+                                        className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
+                                    />
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${cat.color} opacity-40`} />
+                                </div>
+                            )}
 
                             {/* Icon Orb */}
                             <div className={`mb-auto w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${cat.accent} flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform`}>
