@@ -13,7 +13,7 @@ export const BUSINESS = {
   },
   social: {
     facebook: "https://www.facebook.com/walwebede",
-    instagram: "https://www.instagram.com/waltergv.10/",
+    instagram: "https://www.instagram.com/walwebestudio/",
     tiktok: "https://www.tiktok.com/@waltergarciaveliz",
   },
   email: "wgarcia.10@outlook.com",
