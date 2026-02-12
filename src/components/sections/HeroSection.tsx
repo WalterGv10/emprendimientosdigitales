@@ -193,8 +193,8 @@ export default function HeroSection() {
                                 <div className="flex items-start justify-between mb-4">
                                     <h3 className="text-xl font-black text-white leading-tight">Identidad <br /> & Arranque</h3>
                                     <div className="text-right">
-                                        <span className="text-xl font-black bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent block">Q150 - Q400</span>
-                                        <p className="text-xs text-slate-400 font-bold">$20 - $50 USD</p>
+                                        <span className="text-xl font-black bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent block">Desde Q150</span>
+                                        <p className="text-xs text-slate-400 font-bold">aprox. $20 USD</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
@@ -218,8 +218,8 @@ export default function HeroSection() {
                                 <div className="flex items-start justify-between mb-4">
                                     <h3 className="text-xl font-black text-white leading-tight">Escalabilidad <br /> Digital</h3>
                                     <div className="text-right">
-                                        <span className="text-xl font-black text-blue-400 block">Cotización</span>
-                                        <p className="text-xs text-slate-400 font-bold">En Q y $ USD</p>
+                                        <span className="text-xl font-black text-blue-400 block">Desde Q250</span>
+                                        <p className="text-xs text-slate-400 font-bold">aprox. $35 USD</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
@@ -228,18 +228,23 @@ export default function HeroSection() {
                             </div>
                         </div>
 
-                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-purple-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
-                            {/* Future Background Image Placeholder style */}
+                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-cyan-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
+                            {/* Background Image for the Card */}
                             <div className="absolute inset-0 z-0">
-                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/90 to-purple-900/20 group-hover:via-slate-950/80 transition-all duration-500" />
+                                <img
+                                    src="/negoapp.png"
+                                    alt="Negocio en App"
+                                    className="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-cyan-900/40" />
                             </div>
 
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-4">
                                     <h3 className="text-xl font-black text-white leading-tight">Transforma tu <br /> Negocio en App</h3>
                                     <div className="text-right">
-                                        <span className="text-xl font-black text-purple-400 block">Cotización</span>
-                                        <p className="text-xs text-slate-400 font-bold">Consultoría Élite</p>
+                                        <span className="text-xl font-black text-cyan-400 block">Desde Q750</span>
+                                        <p className="text-xs text-slate-400 font-bold">aprox. $100 USD</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
@@ -248,22 +253,29 @@ export default function HeroSection() {
                             </div>
                         </div>
 
-                        <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-6 hover:from-pink-500/20 hover:to-purple-500/20 transition-all group duration-500">
-                            <div className="flex items-start justify-between mb-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-16 h-16 rounded-2xl bg-pink-500/5 border border-pink-500/10 p-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 group-hover:border-pink-500/30 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.15)] overflow-hidden text-2xl">
-                                        🎉
-                                    </div>
-                                    <h3 className="text-xl font-black text-white">Eventos Memorables</h3>
-                                </div>
-                                <div className="text-right">
-                                    <span className="text-xl font-black text-pink-400 block">Desde Q1,200</span>
-                                    <p className="text-xs text-slate-400 font-bold">aprox. $150 USD</p>
-                                </div>
+                        <div className="group relative bg-slate-900 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:border-pink-500/30 transition-all duration-500 overflow-hidden min-h-[160px]">
+                            {/* Background Image for the Card */}
+                            <div className="absolute inset-0 z-0">
+                                <img
+                                    src="/invitacionbackg.png"
+                                    alt="Celebraciones Digitales"
+                                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/80 to-pink-900/40" />
                             </div>
-                            <p className="text-sm text-slate-300 leading-relaxed">
-                                Experiencias digitales para celebraciones. <strong className="text-white">Invitación Interactiva, Confirmación Inteligente</strong> y contenido audiovisual conmemorativo.
-                            </p>
+
+                            <div className="relative z-10">
+                                <div className="flex items-start justify-between mb-4">
+                                    <h3 className="text-xl font-black text-white leading-tight">Celebraciones <br /> de Próximo Nivel</h3>
+                                    <div className="text-right">
+                                        <span className="text-xl font-black text-pink-400 block">Desde Q400</span>
+                                        <p className="text-xs text-slate-400 font-bold">aprox. $50 USD</p>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-slate-300 leading-relaxed max-w-[85%]">
+                                    Digitaliza tus momentos especiales con <strong className="text-white">Invitaciones Interactivas y Confirmación Inteligente</strong>. Elegancia impulsada por tecnología.
+                                </p>
+                            </div>
                         </div>
 
                         {/* Bottom Note */}
