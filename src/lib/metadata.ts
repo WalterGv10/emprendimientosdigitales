@@ -9,6 +9,10 @@ export const siteMetadata: Metadata = {
         default: `${BUSINESS.name} — ${BUSINESS.tagline}`,
         template: `%s | ${BUSINESS.name}`,
     },
+    icons: {
+        icon: "/logoemp.png",
+        apple: "/logoemp.png",
+    },
     description: BUSINESS.description,
     keywords: [
         "emprendedoras",
