@@ -145,3 +145,26 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Walwebs Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes gradient-xy {
+    0%, 100% {
+        background-size: 400% 400%;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-size: 400% 400%;
+        background-position: 100% 50%;
+    }
+}
+.animate-gradient-xy {
+    animation: gradient-xy 3s ease infinite;
+}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, BUSINESS, getWhatsAppUrl } from "@/lib/constants";
@@ -10,11 +11,15 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
+    const pathname = usePathname();
+
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    if (pathname?.startsWith("/perfil")) return null;
 
     return (
         <header
@@ -26,15 +31,18 @@ export default function Header() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
                 {/* Logo */}
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-4 group" aria-label="Ir al inicio">
-                    <div className="relative">
-                        <Image
-                            src="/logo1.webp"
-                            alt="Logo"
-                            width={42}
-                            height={42}
-                            className="group-hover:rotate-6 transition-transform filter brightness-110"
-                        />
+                <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-4 group" aria-label="Ir al inicio">
+                    <div className="relative group-hover:scale-105 transition-transform duration-300">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
+                        <div className="relative rounded-full overflow-hidden border border-white/10 bg-slate-950/50 shadow-lg shadow-cyan-500/10">
+                            <Image
+                                src="/logo1.webp"
+                                alt="Logo"
+                                width={42}
+                                height={42}
+                                className="object-cover p-0.5"
+                            />
+                        </div>
                     </div>
 
                     <div className="h-8 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent mb-1" />

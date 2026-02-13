@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import { getWhatsAppUrl } from "@/lib/constants";
 import { useReducedMotion } from "@/lib/animation-utils";
 
+import { usePathname } from "next/navigation";
+
 export default function WhatsAppButton() {
+    const pathname = usePathname();
     const shouldReduceMotion = useReducedMotion();
+
+    if (pathname?.startsWith("/perfil")) return null;
 
     return (
         <motion.a

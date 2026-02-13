@@ -6,7 +6,12 @@ import { BUSINESS, SERVICES, getWhatsAppUrl, NAV_LINKS } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { Globe2 } from "lucide-react";
 
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+    const pathname = usePathname();
+    if (pathname?.startsWith("/perfil")) return null;
+
     return (
         <footer className="relative overflow-hidden bg-slate-950 pt-12 md:pt-16 pb-8 md:pb-12 border-t border-slate-900">
             {/* Background Image - Created from User Asset */}
@@ -28,14 +33,19 @@ export default function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 mb-16 md:mb-24">
                     {/* Brand */}
                     <div className="lg:col-span-5">
-                        <Link href="/" className="inline-flex items-center gap-3 md:gap-4 mb-6 md:mb-8 group">
-                            <Image
-                                src="/logo2.webp"
-                                alt="Logo"
-                                width={56}
-                                height={56}
-                                className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"
-                            />
+                        <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="inline-flex items-center gap-3 md:gap-4 mb-6 md:mb-8 group">
+                            <div className="relative group-hover:scale-110 transition-transform duration-300">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                                <div className="relative rounded-full overflow-hidden border border-white/10 bg-slate-950 shadow-lg shadow-cyan-500/10">
+                                    <Image
+                                        src="/logo2.webp"
+                                        alt="Logo"
+                                        width={56}
+                                        height={56}
+                                        className="object-cover p-1"
+                                    />
+                                </div>
+                            </div>
                             <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
                                 EMPRENDE <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITAL</span>
                             </span>
