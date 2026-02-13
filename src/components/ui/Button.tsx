@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface ButtonProps {
     children: React.ReactNode;
@@ -41,25 +42,51 @@ export default function Button({
 
     const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
 
+    const motionProps = {
+        whileHover: { scale: 1.05 },
+        whileTap: { scale: 0.95 },
+        transition: { type: "spring" as const, stiffness: 400, damping: 17 }
+    };
+
     if (href && external) {
         return (
-            <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+            <motion.a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes}
+                {...motionProps}
+            >
                 {children}
-            </a>
+            </motion.a>
         );
     }
 
-    if (href) {
+    if (href) { // For Next.js Link we use a motion.div wrapper or pass motion component to Link (if supported) 
+        // but commonly with Next Link we wrap children. 
+        // However, cleaner approach with framer-motion is using a motion component.
+        // Since Next Link passes href to child, we can use a motion.a or wrap Link in motion.div.
+        // Let's use a motion.div wrapper for the link to keep it simple and semantic 
+        // or just apply classes to the Link and assume its a navigational element.
+        // Actually, for best interaction feel, let's wrap the content of the Link.
+        // Or better, make the Link itself a motion component using motion.create(Link).
+        // Simplest robust way: 
         return (
-            <Link href={href} className={classes}>
-                {children}
+            <Link href={href}>
+                <motion.span className={classes} {...motionProps} style={{ display: 'inline-flex' }}>
+                    {children}
+                </motion.span>
             </Link>
         );
     }
 
     return (
-        <button onClick={onClick} className={classes}>
+        <motion.button
+            onClick={onClick}
+            className={classes}
+            {...motionProps}
+        >
             {children}
-        </button>
+        </motion.button>
     );
 }

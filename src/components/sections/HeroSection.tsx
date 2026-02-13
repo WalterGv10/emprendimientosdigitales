@@ -10,7 +10,7 @@ export default function HeroSection() {
     const shouldReduceMotion = useReducedMotion();
 
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950 px-4 pt-16 pb-12 md:pt-24 md:pb-20 lg:pt-24 lg:pb-24">
+        <section className="relative min-h-[90vh] flex items-center lg:items-start justify-center overflow-hidden bg-slate-950 px-4 pt-16 pb-12 md:pt-24 md:pb-20 lg:pt-28 lg:pb-24">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -38,9 +38,9 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(255,255,255,0.05)_1px,transparent_0)] bg-[size:30px_30px] md:bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]" />
 
             <div className="relative z-10 container mx-auto max-w-7xl">
-                <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center lg:items-start">
                     {/* Left - Main Message */}
-                    <div className="text-center lg:text-left pt-8 lg:pt-0">
+                    <div className="text-center lg:text-left pt-8 lg:pt-4 lg:col-span-5">
                         {/* Title with Stagger Effect */}
                         <motion.h1
                             initial={{ opacity: 0, y: 50 }}
@@ -109,7 +109,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, delay: 0.4 }}
-                        className="flex flex-col gap-3 sm:gap-4"
+                        className="flex flex-col gap-3 sm:gap-4 lg:col-span-7"
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                             {/* Sitio Web Profesional - Producto Estrella (Full width on mobile) */}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BUSINESS } from "./constants";
 
-const BASE_URL = "https://emprendedorasdigital.com"; // ← Reemplazar con dominio real
+const BASE_URL = "https://www.walwebs.com"; // Updated Domain
 
 export const siteMetadata: Metadata = {
     metadataBase: new URL(BASE_URL),

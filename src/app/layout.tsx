@@ -34,8 +34,8 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     "name": "Emprendimientos Digitales",
     "description": "Soluciones digitales estratégicas para emprendedores",
-    "url": "https://emprendedorasdigital.com",
-    "image": "https://emprendedorasdigital.com/logo1.webp",
+    "url": "https://www.walwebs.com",
+    "image": "https://www.walwebs.com/logo1.webp",
     "telephone": "+502-54122572",
     "email": "wgarcia.10@outlook.com",
     "address": {
