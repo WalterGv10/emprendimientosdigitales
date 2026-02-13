@@ -2,6 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ShoppingBag, CarFront, Building2, Briefcase } from "lucide-react";
+
+const ICON_MAP: Record<string, any> = {
+    "BAZAR POST-LIVE": ShoppingBag,
+    "AGENCY AUTO": CarFront,
+    "REAL ESTATE": Building2,
+    "CONSULTING": Briefcase,
+};
 
 const categories = [
     {
@@ -116,9 +124,11 @@ export default function LivesSpecialization() {
                                 </div>
                             )}
 
-                            {/* Icon Orb */}
-                            <div className={`mb-auto w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-white/5 ${cat.accent} flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform`}>
-                                {cat.icon}
+                            <div className={`mb-auto w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-white/5 ${cat.accent} flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform text-white`}>
+                                {(() => {
+                                    const Icon = ICON_MAP[cat.title];
+                                    return Icon ? <Icon size={32} /> : cat.icon;
+                                })()}
                             </div>
 
                             <div className="relative z-10">

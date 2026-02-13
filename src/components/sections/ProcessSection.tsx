@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { PROCESS_STEPS } from "@/lib/constants";
+import { MessageSquare, PenTool, TrendingUp } from "lucide-react";
+
+const ICONS = [MessageSquare, PenTool, TrendingUp];
 
 export default function ProcessSection() {
     return (
@@ -43,8 +46,11 @@ export default function ProcessSection() {
                                 {step.number}
                             </div>
 
-                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center text-3xl md:text-4xl mb-8 md:mb-10 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                                {step.icon}
+                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center text-3xl md:text-4xl mb-8 md:mb-10 group-hover:scale-110 transition-transform duration-500 shadow-2xl text-white">
+                                {(() => {
+                                    const Icon = ICONS[i];
+                                    return Icon ? <Icon size={32} /> : step.icon;
+                                })()}
                             </div>
 
                             <h3 className="text-2xl md:text-3xl font-black text-white mb-3 md:mb-4 tracking-tight uppercase">

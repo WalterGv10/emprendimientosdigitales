@@ -3,7 +3,7 @@
 // ============================================================
 
 export const BUSINESS = {
-  name: "Emprendimientos Digitales",
+  name: "WALWEBS | Emprendimientos Digitales",
   tagline: "Soluciones digitales estratégicas para emprendedores",
   description:
     "Convierte tu esfuerzo en ventas organizadas, constantes y profesionales. Soluciones digitales para emprendedores que venden en línea.",

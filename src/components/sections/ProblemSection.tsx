@@ -1,25 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Zap, Layout, TrendingUp, Clock, Image as ImageIcon } from "lucide-react";
 
 const painPoints = [
     {
         problem: "LIVES INFINITOS SIN CIERRES",
-        description: "Haces transmisiones de 3 horas y las ventas se desvanecen al apagar la cámara.",
+        description: "Haces transmisiones de 3 horas y las ventas se desvanecen al apagar la cámara. El esfuerzo no se traduce en pedidos organizados.",
         solution: "Catálogo Post-Live Estratégico",
-        icon: "⏳"
+        icon: <Zap className="w-8 h-8 text-yellow-500" />
     },
     {
         problem: "INVENTARIO INVISIBLE",
-        description: "Tus productos se ven genéricos y no generan deseo de compra en redes.",
-        solution: "Producción Audiovisual Premium",
-        icon: "🖼️"
+        description: "Tus productos se ven genéricos y no generan deseo de compra. Sin una vitrina clara, el cliente se confunde y se va.",
+        solution: "Catálogos Inteligentes & Escala",
+        icon: <Layout className="w-8 h-8 text-blue-500" />
     },
     {
         problem: "ESTANCAMIENTO DIGITAL",
-        description: "Sabes que necesitas dar el salto pero la tecnología te parece un muro.",
+        description: "Sabes que necesitas dar el salto pero la tecnología te parece un muro. No dejes que el miedo a lo técnico detenga tu crecimiento.",
         solution: "Acompañamiento Walweb",
-        icon: "🧱"
+        icon: <TrendingUp className="w-8 h-8 text-emerald-500" />
     },
 ];
 
@@ -62,7 +63,9 @@ export default function ProblemSection() {
                                 className="group p-6 md:p-10 bg-slate-50 rounded-2xl md:rounded-[2rem] border border-transparent hover:border-slate-200 hover:bg-white transition-all duration-500"
                             >
                                 <div className="flex items-start justify-between mb-6 md:mb-8">
-                                    <span className="text-3xl md:text-4xl">{item.icon}</span>
+                                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                                        {item.icon}
+                                    </div>
                                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-300">0{i + 1}</span>
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-black text-slate-950 mb-3 md:mb-4 tracking-tight">

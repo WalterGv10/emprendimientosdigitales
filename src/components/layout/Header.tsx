@@ -26,17 +26,27 @@ export default function Header() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
                 {/* Logo */}
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 group" aria-label="Ir al inicio">
-                    <Image
-                        src="/logo1.webp"
-                        alt="Logo"
-                        width={48}
-                        height={48}
-                        className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"
-                    />
-                    <span className="text-lg md:text-xl font-black tracking-tighter uppercase transition-colors text-white">
-                        EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITALES</span>
-                    </span>
+                <Link href="/" className="flex items-center gap-4 group" aria-label="Ir al inicio">
+                    <div className="relative">
+                        <Image
+                            src="/logo1.webp"
+                            alt="Logo"
+                            width={42}
+                            height={42}
+                            className="group-hover:rotate-6 transition-transform filter brightness-110"
+                        />
+                    </div>
+
+                    <div className="h-8 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent mb-1" />
+
+                    <div className="flex flex-col -space-y-1">
+                        <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
+                            WAL<span className="text-cyan-400">WEBS</span>
+                        </span>
+                        <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.3em] text-slate-500 group-hover:text-cyan-400 transition-colors">
+                            Estudio Digital
+                        </span>
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}

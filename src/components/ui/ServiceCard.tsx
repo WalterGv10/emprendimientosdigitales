@@ -4,13 +4,41 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Service } from "@/lib/constants";
 import { getWhatsAppUrl } from "@/lib/constants";
+import {
+    Building2,
+    CarFront,
+    UserCircle2,
+    Briefcase,
+    Video,
+    Rocket,
+    Palette,
+    Sparkles,
+    Globe,
+    AppWindow,
+    LucideIcon
+} from "lucide-react";
 
 interface ServiceCardProps {
     service: Service;
     index: number;
 }
 
+const ICON_MAP: Record<string, LucideIcon> = {
+    "landing-inmobiliaria": Building2,
+    "catalogo-digital-autos": CarFront,
+    "identidad-profesional": UserCircle2,
+    "servicios-empresariales": Briefcase,
+    "produccion-audiovisual": Video,
+    "combo-inicio": Rocket,
+    "identidad-arranque": Palette,
+    "combo-visual": Sparkles,
+    "estructura-web": Globe,
+    "negocio-app": AppWindow,
+};
+
 export default function ServiceCard({ service, index }: ServiceCardProps) {
+    const IconComponent = ICON_MAP[service.id];
+
     return (
         <motion.article
             initial={{ opacity: 0, y: 40 }}
@@ -26,9 +54,9 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
 
             {/* Icon */}
             <div
-                className={`mb-8 md:mb-10 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-2xl md:rounded-3xl bg-gradient-to-br ${service.gradient} text-3xl md:text-4xl shadow-2xl group-hover:scale-110 transition-transform duration-500`}
+                className={`mb-8 md:mb-10 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-2xl md:rounded-3xl bg-gradient-to-br ${service.gradient} text-3xl md:text-4xl shadow-2xl group-hover:scale-110 transition-transform duration-500 text-white`}
             >
-                {service.icon}
+                {IconComponent ? <IconComponent className="w-8 h-8 md:w-10 md:h-10" /> : service.icon}
             </div>
 
             {/* Content */}
