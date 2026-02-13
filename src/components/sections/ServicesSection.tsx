@@ -9,8 +9,8 @@ import { getWhatsAppUrl } from "@/lib/constants";
 export default function ServicesSection() {
     // Group services by level
     const contentServices = SERVICES.filter(s => s.id === "produccion-audiovisual");
-    const basicServices = SERVICES.filter(s => s.id === "combo-visual");
-    const mediumServices = SERVICES.filter(s => s.id === "catalogo-digital" || s.id === "catalogo-digital-autos");
+    const basicServices = SERVICES.filter(s => s.id === "identidad-arranque" || s.id === "combo-visual");
+    const mediumServices = SERVICES.filter(s => s.id === "identidad-profesional" || s.id === "catalogo-digital-autos");
     const highServices = SERVICES.filter(s => s.id === "landing-inmobiliaria" || s.id === "servicios-empresariales" || s.id === "combo-inicio" || s.id === "estructura-web" || s.id === "negocio-app");
     const specialServices = SERVICES.filter(s => s.id === "combo-eventos");
 
@@ -19,12 +19,39 @@ export default function ServicesSection() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <SectionHeading
                     badge="Nuestros Servicios"
-                    title="Contenido que convierte"
-                    subtitle="Desde videos y multimedia hasta landing pages completas. Soluciones digitales para emprendedores de Guatemala y EE.UU."
+                    title="Soluciones a tu Medida"
+                    subtitle="Desde tu primera identidad digital hasta aplicaciones web escalables. Tecnología premium accesible para todos."
                 />
 
                 {/* ═══════════════════════════════════════════════════════ */}
-                {/* 🎥 MULTIMEDIA — Full-width Dark Hero Banner            */}
+                {/* 🎨 ARRANQUE & IDENTIDAD — The "Why so cheap" section     */}
+                {/* ═══════════════════════════════════════════════════════ */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="mb-12 sm:mb-16"
+                >
+                    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm mb-8">
+                        <div className="max-w-3xl">
+                            <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 uppercase">
+                                🚀 Empujón Inicial para Emprendedores
+                            </h3>
+                            <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+                                Diseñamos estos paquetes pensando en quienes están abriendo su primer Live o página. <strong className="text-slate-950">¿Por qué el precio es tan bajo?</strong> Porque queremos ser tus aliados tecnológicos desde el día 1. Si te ayudamos a verte profesional hoy, creceremos juntos mañana cuando necesites una infraestructura más grande.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            {basicServices.map((service, index) => (
+                                <ServiceCard key={service.id} service={service} index={index} />
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* ═══════════════════════════════════════════════════════ */}
+                {/* 🎥 MULTIMEDIA — Content section                         */}
                 {/* ═══════════════════════════════════════════════════════ */}
                 {contentServices.length > 0 && (
                     <motion.div
@@ -34,37 +61,24 @@ export default function ServicesSection() {
                         transition={{ duration: 0.7 }}
                         className="mb-12 sm:mb-16 md:mb-20 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-red-950 p-6 sm:p-8 md:p-12"
                     >
-                        {/* Decorative glows */}
                         <div className="absolute -top-20 -right-20 w-60 h-60 bg-red-500/20 rounded-full blur-[80px]" />
                         <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-orange-500/15 rounded-full blur-[80px]" />
 
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                            {/* Left — Copy */}
                             <div>
                                 <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-red-500/20 border border-red-500/30 rounded-full text-xs sm:text-sm font-bold text-red-300 mb-4 sm:mb-6">
                                     <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-                                    🎥 Nuestra Especialidad
+                                    🎥 Potencia tus Redes
                                 </div>
                                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
-                                    Contenido Multimedia<br />
-                                    <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-400 bg-clip-text text-transparent">que Vende</span>
+                                    Multimedia y<br />
+                                    <span className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-400 bg-clip-text text-transparent">Edición Pro</span>
                                 </h3>
                                 <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-4 sm:mb-6 max-w-lg">
-                                    Videos, reels, TikToks, edición profesional. <strong className="text-white">Contenido optimizado para convertir seguidores en clientes.</strong>
+                                    Extraemos lo mejor de tus transmisiones para crear clips que sigan vendiendo mientras duermes.
                                 </p>
-                                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-slate-400">
-                                    <span className="flex items-center gap-1.5">
-                                        <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                        Precio bajo solicitud
-                                    </span>
-                                    <span className="flex items-center gap-1.5">
-                                        <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                        Lo que mejor hacemos
-                                    </span>
-                                </div>
                             </div>
 
-                            {/* Right — Service Cards */}
                             <div className="grid grid-cols-1 gap-4 sm:gap-6">
                                 {contentServices.map((service, index) => (
                                     <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 hover:border-red-500/30 transition-all duration-300">
@@ -94,10 +108,8 @@ export default function ServicesSection() {
                     </motion.div>
                 )}
 
-
-
                 {/* ═══════════════════════════════════════════════════════ */}
-                {/* 🚀 TRANSFORMACIÓN PRO — Featured Card with Glow         */}
+                {/* 📊 ESCALABILIDAD — Catalog Services                     */}
                 {/* ═══════════════════════════════════════════════════════ */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -106,7 +118,33 @@ export default function ServicesSection() {
                     transition={{ duration: 0.7 }}
                     className="mb-12 sm:mb-16 md:mb-20"
                 >
+                    <div className="text-center mb-8 md:mb-12">
+                        <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 px-4">
+                            Catálogos Inteligentes & <span className="text-blue-600">Escala</span>
+                        </h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                        {mediumServices.map((service, index) => (
+                            <ServiceCard key={service.id} service={service} index={index} />
+                        ))}
+                    </div>
+                </motion.div>
 
+                {/* ═══════════════════════════════════════════════════════ */}
+                {/* 🚀 TRANSFORMACIÓN PRO — Structure and Apps                */}
+                {/* ═══════════════════════════════════════════════════════ */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="mb-12 sm:mb-16 md:mb-20"
+                >
+                    <div className="text-center mb-8 md:mb-12">
+                        <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4 px-4 uppercase">
+                            Infraestructura Web <span className="text-cyan-500">Premium</span>
+                        </h3>
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         {highServices.map((service, index) => (
                             <ServiceCard key={service.id} service={service} index={index} />

@@ -37,7 +37,7 @@ export default function Footer() {
                                 className="group-hover:scale-110 transition-transform drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"
                             />
                             <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
-                                EMPRENDIMIENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITALES</span>
+                                EMPRENDE <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">DIGITAL</span>
                             </span>
                         </Link>
                         <p className="text-base md:text-xl text-slate-400 font-medium leading-relaxed max-w-sm mb-8 md:mb-12">

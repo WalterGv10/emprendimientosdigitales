@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const categories = [
     {
-        title: "PROX RETAIL",
+        title: "BAZAR POST-LIVE",
         icon: "🛍️",
-        description: "El motor de ventas imparable para moda, hogar y más productos de alta rotación.",
+        description: "Diseñado para emprendedoras de Guatemala y Estados Unidos que venden en Lives de TikTok y Facebook. Organiza pedidos y envíos sin perder tiempo.",
         color: "from-blue-600/20 to-indigo-600/20",
-        accent: "bg-blue-500",
+        accent: "bg-blue-500 shadow-blue-500/50",
         id: "01",
-        image: "/fondolives.webp"
+        image: "/bazar.webp"
     },
     {
         title: "AGENCY AUTO",
@@ -117,7 +117,7 @@ export default function LivesSpecialization() {
                             )}
 
                             {/* Icon Orb */}
-                            <div className={`mb-auto w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${cat.accent} flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform`}>
+                            <div className={`mb-auto w-14 h-14 md:w-16 md:h-16 rounded-full ring-4 ring-white/5 ${cat.accent} flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform`}>
                                 {cat.icon}
                             </div>
 
